@@ -1,0 +1,567 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style>body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    background-color: #dddddd;
+    background-image: linear-gradient(#f1f1f1, #dddddd);
+    background-repeat: repeat-x;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #dddddd #cccccc #cccccc #dddddd;
+    border-image: none;
+    border-style: solid;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}</style>
+</head>
+<body>
+<h2 id="HAProxy">HAProxy</h2>
+
+<p>HAProxy是一款开源、高性能的、基于TCP和HTTP应用的负载均衡软件。</p>
+
+<h3 id="L......">特点</h3>
+
+<blockquote><ul>
+<li>可靠性和稳定性非常好，可与硬件级的F5负载均衡设备相媲美。</li>
+<li>最高可以同时维护40000~50000个并发连接，单位时间内处理的最大请求数为20000个，最大数据处理能力可达10Gbit/s。</li>
+<li>支持多于8种负载均衡算法，同时也支持会话保持。</li>
+<li>支持虚拟主机功能。</li>
+<li>从HAProxy1.3后开始支持连接拒绝、全透明代理等功能。</li>
+<li>支持功能强大的服务器状态监控页面，可实时了解系统的运行状况。</li>
+<li>拥有功能强大的ACL(访问控制列表）支持，能给使用带来很大方便。</li>
+</ul>
+</blockquote>
+
+<h3 id="L...............">安装与配置</h3>
+
+<h4 id="L1.......">1.安装</h4>
+
+<p>下载地址：<a href="https://fossies.org/linux/misc/haproxy-1.8.13.tar.gz/">https://fossies.org/linux/misc/haproxy-1.8.13.tar.gz/</a><br/>
+   # 解压<br/>
+    <code>tar -zxvf haproxy-1.8.13.tar.gz</code><br/>
+    <code>cd haproxy-1.8.13</code><br/>
+   # 安装<br/>
+    <code>make TARGET=linux2628 ARCH=x86_64 PREFIX=/usr/local/haproxy</code><br/>
+    <code>make install PREFIX=/usr/local/haproxy</code><br/>
+安装完成后安装目录下生成三个目录<code>doc</code> <code>sbin</code> <code>share</code></p>
+
+<h4 id="L2.......">2.配置</h4>
+
+<p>安装完成后，默认安装目录中没有配置文件，需要在安装目录中创建配置文件目录和配置文件：<br/>
+<code>mkdir /usr/local/haproxy/conf</code><br/>
+<code>touch haproxy.cfg</code></p>
+
+<h5 id="L2.1..................">2.1配置文件概述</h5>
+
+<p>HAProxy配置文件由5个部分组成：</p>
+
+<blockquote><ul>
+<li>global部分<br/>
+用来设置全局配置参数，属于进程级的配置，通常和操作系统配置有关。</li>
+<li>defaults部分<br/>
+默认参数配置部分。在此部分设置的参数值，默认会自动被引用到下面的frontend、backend和listen部分中。</li>
+<li>frontend部分<br/>
+用于设置接受用户请求的前端虚拟节点。frontend可根据ACL规则直接指定要使用的后端（backend）。</li>
+<li>backend部分<br/>
+用于设置集群后端服务集群的配置，用来添加一组真实服务器。</li>
+<li>listen部分<br/>
+frontend部分和backend部分的结合体。HAProxy 1.3版本之前，HAProxy的所有配置选项都在这个部分中设置。</li>
+</ul>
+</blockquote>
+
+<h5 id="L2.2..................">2.2配置文件详解</h5>
+
+<pre><code>#########全局配置##########
+global
+　　log 127.0.0.1 local0 info #日志输出配置，所有日志都记录在本机，通过local0输出,info定义haproxy日志级别[error warring info debug]
+　　daemon #以后台形式运行harpoxy
+　　nbproc 1 #设置进程数量
+　　maxconn 4096 #默认最大连接数
+　　#user haproxy #运行haproxy的用户
+　　#group haproxy #运行haproxy的用户所在的组
+　　#pidfile /var/run/haproxy.pid #haproxy进程PID文件
+
+########默认配置############
+defaults
+   log global #使用全局的日志配置，global表示引用在HAProxy配置文件global部分中定义的log选项配置格式
+　　mode http #默认的模式mode { tcp|http|health }，tcp是默认模式，客户端和服务器间建立全双工的连接，不对7层报文做任何类型的检查，http模式下客户端请求被转发前会被深度分析，所有与RFC格式不兼容的请求将被拒绝，health只会返回OK，基本已废弃
+　　retries 2 #设置连接后端服务器的失败重试次数，连接失败的次数如果超过设定值，HAProxy将对应的后端服务器标记为不可用
+　　maxconn 4096 #默认的最大连接数
+　　timeout connect 5000ms #成功连接到一台服务器的最长等待时间
+　　timeout client 30000ms #连接客户端发送数据时最长的等待时间
+　　timeout server 30000ms #服务器端返回客户端数据发送的最长等待时间
+　　timeout check 2000 #对后端服务器的检测超时时间
+　　#timeout http-keep-alive10s #默认持久连接超时时间
+　　#timeout http-request 10s #默认http请求超时时间
+　　#timeout queue 1m #默认队列超时时间
+　　balance roundrobin #设置默认负载均衡方式，轮询方式
+　　#balance source #设置默认负载均衡方式，类似于nginx的ip_hash
+　　#balnace leastconn #设置默认负载均衡方式，最小连接数
+
+########统计页面配置########
+listen admin_stats   #定义了一个名为“admin_stats”的实例
+　　bind 0.0.0.0:1080 #设置Frontend和Backend的组合体，监控组的名称，按需要自定义名称
+　　mode http 
+　　option httplog #采用http日志格式
+　　#log 127.0.0.1 local0 err #错误日志记录
+　　maxconn 10 #默认的最大连接数
+　　stats refresh 30s #统计页面自动刷新时间
+　　stats uri /stats #统计页面url
+　　stats realm welcome login\ Haproxy #登录统计页面时密码框上提示文本
+　　stats auth admin:admin #设置监控页面的用户和密码:admin,可以设置多个用户名
+　　stats hide-version #隐藏统计页面上HAProxy的版本信息
+　　stats admin if TRUE #设置手工启动/禁用后端服务器，后端服务器(haproxy-1.4.9以后版本)
+
+########设置haproxy 错误页面#####
+#errorfile 403 /home/haproxy/haproxy/errorfiles/403.http
+#errorfile 500 /home/haproxy/haproxy/errorfiles/500.http
+#errorfile 502 /home/haproxy/haproxy/errorfiles/502.http
+#errorfile 503 /home/haproxy/haproxy/errorfiles/503.http
+#errorfile 504 /home/haproxy/haproxy/errorfiles/504.http
+
+########frontend前端配置##############
+frontend main  #定义了一个名为“main”的前端虚拟节点
+　　bind *:80 #定义一个或几个监听的套接字
+　　acl web hdr(host) -i www.abc.com  #acl后面是规则名称，-i为忽略大小写，后面跟的是要访问的域名，如果访问www.abc.com这个域名，就触发web规则
+　　acl img hdr(host) -i img.abc.com  #如果访问img.abc.com这个域名，就触发img规则
+　　use_backend webserver if web   #如果上面定义的web规则被触发，即访问www.abc.com，就将请求分发到webserver这个作用域
+　　use_backend imgserver if img   #如果上面定义的img规则被触发，即访问img.abc.com，就将请求分发到imgserver这个作用域
+　　default_backend dynamic #指定默认的后端服务池，dynamic在backend部分定义，不满足则响应backend的默认页面
+
+########backend后端配置##############
+backend webserver #webserver作用域
+　　mode http
+　　balance roundrobin #balance roundrobin 负载轮询，balance source 保存session值，支持static-rr，leastconn，first，uri等参数
+　　option httpchk /index.html HTTP/1.0 #健康检查, 检测文件，如果分发到后台index.html访问不到就不再分发给它
+   option redispatch #用于cookie保持的环境中，HAProxy将serverID插入cookie中，以保证会话的持久性，如果后端服务器故障，客户端的请求会被强制定向到另一个健康的服务器上
+　　server web1 10.16.0.9:8085 cookie 1 weight 5 check inter 2000 rise 2 fall 3
+　　server web2 10.16.0.10:8085 cookie 2 weight 3 check inter 2000 rise 2 fall 3
+   #定义多个后端真实服务器
+　　#cookie 1表示serverid为1，check inter 1500 是检测心跳频率 
+　　#rise 2是2次正确认为服务器可用，fall 3是3次失败认为服务器不可用，weight代表权重
+
+backend imgserver  #定义后端服务池
+　　mode http
+　　option httpchk /index.php
+　　balance roundrobin 
+　　server img01 192.168.137.101:80 check inter 2000 fall 3
+　　server img02 192.168.137.102:80 check inter 2000 fall 3
+
+backend dynamic   #定义后端服务池
+　　balance roundrobin 
+　　server test1 192.168.1.23:80 check maxconn 2000 
+　　server test2 192.168.1.24:80 check maxconn 2000
+</code></pre>
+
+<h4 id="L3.......ACL..............................">3.通过ACL规则实现智能负载均衡</h4>
+
+<p>HAProxy通过ACL完成以下两种主要功能：</p>
+
+<blockquote><p>1) 通过设置的ACL规则检查客户端请求是否合法，如果符合ACL规则要求就放行。<br/>
+2) 符合ACL规则要求的请求将被提交到后端的服务器集群，进而实现基于ACL规则的负载均衡。</p></blockquote>
+
+<p>HAProxy中的ACL规则经常使用在frontend部分中，使用方法如下：<br/>
+<code>acl 自定义的acl名称 acl方法 -i [匹配的路径或文件]</code></p>
+
+<ul>
+<li>acl：一个关键字，表示定义ACL规则的开始。</li>
+<li>acl方法：HAProxy定义了很多ACL方法，常用的方法有 <code>hdr_reg(host)</code>、 <code>hdr_dom(host)</code>、 <code>hdr_beg(host)</code>、 <code>url_sub</code>、 <code>url_dir</code>、 <code>path_beg</code>、 <code>path_end</code>等。</li>
+<li><code>-i</code>表示忽略大小写。</li>
+</ul>
+
+
+<h4 id="L4................HAProxy">4.管理与维护HAProxy</h4>
+
+<p>HAProxy安装目录的sbin目录下有一个可执行的二进制文件<code>haproxy</code>，对HAProxy的启动、关闭、重启等操作都是通过这个二进制文件来实现的。</p>
+
+<p>以下即此文件的用法：<br/>
+<code>haproxy [-f &lt;cfgfile&gt;]* [ -vdVD ] [ -n &lt;maxconn&gt; ] [ -N &lt;maxpconn&gt; ]</code> <br/>
+其中：<br/>
+<code>cfgfile</code>:配置文件<br/>
+<code>maxconn</code>:最大并发连接总数<br/>
+<code>maxpconn</code>：默认的连接数</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center;">参数</th>
+<th style="text-align:left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">-v </td>
+<td style="text-align:left;">显示当前版本信息；“-vv”显示已知的创建选项</td>
+</tr>
+<tr>
+<td style="text-align:center;">-d </td>
+<td style="text-align:left;">表示让程序运行在debug模式：“-db”表示禁用后台模式，让程序在前台运行</td>
+</tr>
+<tr>
+<td style="text-align:center;">-D </td>
+<td style="text-align:left;">让程序以daemon模式启动，此选项也可以在HAProxy配置文件中设置</td>
+</tr>
+<tr>
+<td style="text-align:center;">-q </td>
+<td style="text-align:left;">表示无限提示模式，程序运行部输出任何信息</td>
+</tr>
+<tr>
+<td style="text-align:center;">-c </td>
+<td style="text-align:left;">对HAProxy配置文件进行语法检查。若配置文件错误，会输出对应的错误位置和错误消息</td>
+</tr>
+<tr>
+<td style="text-align:center;">-n </td>
+<td style="text-align:left;">设置最大并发连接总数</td>
+</tr>
+<tr>
+<td style="text-align:center;">-m </td>
+<td style="text-align:left;">限制可用的内存大小，以MB为单位</td>
+</tr>
+<tr>
+<td style="text-align:center;">-N </td>
+<td style="text-align:left;">设置默认的连接数</td>
+</tr>
+<tr>
+<td style="text-align:center;">-p </td>
+<td style="text-align:left;">设置HAProxy的PID文件路径</td>
+</tr>
+<tr>
+<td style="text-align:center;">-de </td>
+<td style="text-align:left;">不使用epoll模型</td>
+</tr>
+<tr>
+<td style="text-align:center;">-ds </td>
+<td style="text-align:left;">不使用speculative epoll</td>
+</tr>
+<tr>
+<td style="text-align:center;">-dp </td>
+<td style="text-align:left;">不使用poll模型</td>
+</tr>
+<tr>
+<td style="text-align:center;">-sf </td>
+<td style="text-align:left;">程序启动后想PID文件里的进程发送FINISH信号，这个参数需要放在命令行的最后</td>
+</tr>
+<tr>
+<td style="text-align:center;">-st </td>
+<td style="text-align:left;">程序启动后向PID里的进程发送TERMINATE信号，这个参数放在命令行的最后，经常用于重启HAProxy进程</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>启动HAProxy<br/>
+<code>/usr/local/haproxy/sbin/haproxy -f \ &gt; /usr/local/haproxy/conf/haproxy.cfg</code></li>
+<li>关闭HAProxy<br/>
+<code>killalll -9 haproxy</code></li>
+<li>平滑重启HAProxy<br/>
+<code>/usr/local/haproxy/sbin/haproxy -f \ &gt; /usr/local/haproxy/conf/haproxy.cfg -st 'cat /usr/local/haproxy/logs/haproxy.pid'</code></li>
+</ul>
+
+</body>
+</html>

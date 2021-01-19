@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MINIO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>分布式Minio服务</h2>
+<h3>Minio服务的特点</h3>
+<blockquote>
+<ol>
+<li>数据保护：引入纠删码来防范节点宕机和位衰减，部署分布式minio最少需要4块硬盘。</li>
+<li>高可用：集群中部署了n块硬盘，当不少于n/2块硬盘在线时，存储的数据就是安全的。创建新对象需要至少n/2+1块硬盘。</li>
+<li>限制：分布式minio单租户要求最少两台，最多32台服务器，但是对这些服务器中共享硬盘的个数没有限制。</li>
+<li>一致性：在分布式和单机模式下，minio的读写操作都严格遵循 read-after-write 一致性原则。</li>
+</ol>
+</blockquote>
+<h3>部署分布式Minio服务</h3>
+<h4>单节点安装Minio</h4>
+<p>分布式minio系统中每台机器都需要安装Minio（<a href="https://docs.minio.io/docs/minio-quickstart-guide">官方文档</a>）<br />
+以下是安装过程（centos7-64bit)  </p>
+<p><code>wget https://dl.minio.io/server/minio/release/linux-amd64/minio</code><br />
+<code>chmod +x minio</code><br />
+<code>./minio server /data</code><br />
+<img src="./下载安装启动minio.png" />  </p>
+<p>浏览器访问http://127.0.0.1:9000 或 http://10.0.0.13:9000 ,用AccessKey和SecretKey登录，Minio界面如下图：<br />
+<img src="./minio控制界面.png" />  </p>
+<h3>分布式Minio</h3>
+<blockquote>
+<p>注意：<br />
+1. 执行Minio命令前，先将MINIO<em>ACCESS</em>KEY和MINIO<em>SECRET</em>KEY在所有节点上export到环境变量；<br />
+2. 所有运行Minio的节点需要在相同的环境下，即相同的操作系统和相同数量的硬盘；<br />
+3. 分布式Minio需要使用空目录；<br />
+4. 运行分布式Minio的服务器的节点时间差不能超过3秒，可以使用<a href="http://www.ntp.org/">NTP</a>来保证服务器间的时间一致性。  
+</p>
+</blockquote>
+<p>用来运行minio服务的三台机器分别为20.20.20.152, 20.20.20.153, 20.20.20.155，这三台机器都安装了minio，以下的操作需要分别在三台机器上执行（<a href="https://docs.minio.io/docs/distributed-minio-quickstart-guide">官方文档</a>）：  </p>
+<ol>
+<li>
+<p>创建存储路径<br />
+<code>mkdir /export{1,2,3,4}</code>  
+</p>
+</li>
+<li>
+<p>开放80和9000端口<br />
+<code>firewall-cmd --add-port=80/tcp --permanent</code>  <br />
+<code>firewall-cmd --add-port=9000/tcp --permanent</code>  <br />
+<code>firewall-cmd --reload</code>    
+</p>
+</li>
+<li>
+<p>设置环境变量access<em>key和secret</em>key<br />
+<code>export MINIO_ACCESS_KEY=ruchi</code><br />
+<code>export MINIO_SECRET_KEY=miniocluster</code>  
+</p>
+</li>
+<li>
+<p>启动服务<br />
+<code>./minio server http://20.20.20.{152,153,155}/export{1,2,3,4}</code><br />
+<img src="./启动minio集群.png" />  
+</p>
+</li>
+<li>
+<p>后台运行服务(可选）<br />
+<code>./minio server http://20.20.20.{152,153,155}/export{1,2,3,4} &gt; minio.file 2&gt;&amp;1 &amp;</code>  
+</p>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
