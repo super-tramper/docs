@@ -1,0 +1,568 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style>body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    background-color: #dddddd;
+    background-image: linear-gradient(#f1f1f1, #dddddd);
+    background-repeat: repeat-x;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: #dddddd #cccccc #cccccc #dddddd;
+    border-image: none;
+    border-style: solid;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}</style>
+</head>
+<body>
+<h2 id="Shell........................Shell.Here.Document....dev.null......">Shell输入输出重定向：Shell Here Document，/dev/null文件</h2>
+
+<p>Unix 命令默认从标准输入设备(stdin)获取输入，将结果输出到标准输出设备(stdout)显示。一般情况下，标准输入设备就是键盘，标准输出设备就是终端，即显示器。</p>
+
+<h3 id="L...............">输出重定向</h3>
+
+<p>命令的输出不仅可以是显示器，还可以很容易的转移向到文件，这被称为输出重定向。</p>
+
+<p>命令输出重定向的语法为：</p>
+
+<pre><code>$ command &gt; file
+</code></pre>
+
+<p>这样，输出到显示器的内容就可以被重定向到文件。</p>
+
+<p>打开 users 文件，可以看到下面的内容：</p>
+
+<pre><code>$ cat users
+oko         tty01   Sep 12 07:30
+ai          tty15   Sep 12 13:32
+ruth        tty21   Sep 12 10:10
+pat         tty24   Sep 12 13:07
+steve       tty25   Sep 12 13:03
+$
+</code></pre>
+
+<p>输出重定向会覆盖文件内容：</p>
+
+<pre><code>$ echo line 1 &gt; users
+$ cat users
+line 1
+$
+</code></pre>
+
+<p>如果不希望文件内容被覆盖，可以使用 >> 追加到文件末尾:</p>
+
+<pre><code>$ echo line 2 &gt;&gt; users
+$ cat users
+line 1
+line 2
+$
+</code></pre>
+
+<h3 id="L...............">输入重定向</h3>
+
+<p>和输出重定向一样，Unix 命令也可以从文件获取输入，语法为：</p>
+
+<pre><code>command &lt; file
+</code></pre>
+
+<p>这样，本来需要从键盘获取输入的命令会转移到文件读取内容。</p>
+
+<p>注意：输出重定向是大于号(>)，输入重定向是小于号(&lt;)。</p>
+
+<p>例如，计算 users 文件中的行数，可以使用下面的命令：</p>
+
+<pre><code>$ wc -l users
+2 users
+$
+</code></pre>
+
+<p>也可以将输入重定向到 users 文件：
+<code>
+$ wc -l &lt; users
+2
+$
+</code>
+注意：上面两个例子的结果不同：第一个例子，会输出文件名；第二个不会，因为它仅仅知道从标准输入读取内容。</p>
+
+<h3 id="L.....................">重定向深入讲解</h3>
+
+<p>一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：</p>
+
+<ul>
+<li>标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。</li>
+<li>标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。</li>
+<li>标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。
+默认情况下，command > file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file。
+如果希望 stderr 重定向到 file，可以这样写：</li>
+</ul>
+
+
+<pre><code>$command 2 &gt; file
+</code></pre>
+
+<p>如果希望 stderr 追加到 file 文件末尾，可以这样写：</p>
+
+<pre><code>$command 2 &gt;&gt; file
+</code></pre>
+
+<p>2 表示标准错误文件(stderr)。
+如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：</p>
+
+<pre><code>$command &gt; file 2&gt;&amp;1
+</code></pre>
+
+<p>或</p>
+
+<pre><code>$command &gt;&gt; file 2&gt;&amp;1
+</code></pre>
+
+<p>如果希望对 stdin 和 stdout 都重定向，可以这样写：</p>
+
+<pre><code>$command &lt; file1 &gt;file2
+</code></pre>
+
+<p>command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。
+全部可用的重定向命令列表</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">命令</th>
+<th style="text-align:left;">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">command > file</td>
+<td style="text-align:left;">将输出重定向到 file。</td>
+</tr>
+<tr>
+<td style="text-align:left;">command &lt; file</td>
+<td style="text-align:left;">将输入重定向到 file。</td>
+</tr>
+<tr>
+<td style="text-align:left;">command >> file</td>
+<td style="text-align:left;">将输出以追加的方式重</td>
+</tr>
+<tr>
+<td style="text-align:left;">n > file</td>
+<td style="text-align:left;">将文件描述符为 n 的文件重定向到 file。</td>
+</tr>
+<tr>
+<td style="text-align:left;">n >> file</td>
+<td style="text-align:left;">将文件描述符为 n 的文件以追加的方式重定向到 file。</td>
+</tr>
+<tr>
+<td style="text-align:left;">n >&amp; m</td>
+<td style="text-align:left;">将输出文件 m 和 n 合并。</td>
+</tr>
+<tr>
+<td style="text-align:left;">n &lt;&amp; m</td>
+<td style="text-align:left;">将输入文件 m 和 n 合并。</td>
+</tr>
+<tr>
+<td style="text-align:left;">n &lt;&amp; m</td>
+<td style="text-align:left;">将输入文件 m 和 n 合并。</td>
+</tr>
+<tr>
+<td style="text-align:left;">&lt;&lt; tag</td>
+<td style="text-align:left;">将开始标记 tag 和结束标记 tag 之间的内容作为输入。</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="Here.Document">Here Document</h3>
+
+<p>即嵌入文档，Here Document 是 Shell 中的一种特殊的重定向方式，它的基本的形式如下：</p>
+
+<pre><code>command &lt;&lt; delimiter
+    document
+delimiter
+</code></pre>
+
+<p>它的作用是将两个 delimiter 之间的内容(document) 作为输入传递给 command。</p>
+
+<p>注意：</p>
+
+<ul>
+<li>结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。</li>
+<li>开始的delimiter前后的空格会被忽略掉。</li>
+</ul>
+
+
+<p>下面的例子，通过 wc -l 命令计算 document 的行数：</p>
+
+<pre><code>$wc -l &lt;&lt; EOF
+    This is a simple lookup program
+    for good (and bad) restaurants
+    in Cape Town.
+EOF
+3
+$
+</code></pre>
+
+<p>也可以 将 Here Document 用在脚本中，例如：</p>
+
+<pre><code>#!/bin/bash
+cat &lt;&lt; EOF
+This is a simple lookup program
+for good (and bad) restaurants
+in Cape Town.
+EOF
+</code></pre>
+
+<p>运行结果：</p>
+
+<pre><code>This is a simple lookup program
+for good (and bad) restaurants
+in Cape Town.
+</code></pre>
+
+<p>下面的脚本通过 vi 编辑器将 document 保存到 test.txt 文件：</p>
+
+<pre><code>#!/bin/sh
+filename=test.txt
+vi $filename &lt;&lt;EndOfCommands
+i
+This file was created automatically from
+a shell script
+^[
+ZZ
+EndOfCommands
+</code></pre>
+
+<p>运行脚本：</p>
+
+<pre><code>$ sh test.sh
+Vim: Warning: Input is not from a terminal
+$
+</code></pre>
+
+<p>打开 test.txt，可以看到下面的内容：</p>
+
+<pre><code>$ cat test.txt
+This file was created automatically from
+a shell script
+$
+</code></pre>
+
+<h3 id="L.dev.null.......">/dev/null 文件</h3>
+
+<p>如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：</p>
+
+<pre><code>$ command &gt; /dev/null
+</code></pre>
+
+<p>/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到”禁止输出“的效果。
+如果希望屏蔽 stdout 和 stderr，可以这样写：</p>
+
+<pre><code>$ command &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+</body>
+</html>
